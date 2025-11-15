@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heat Pump Cost Calculator | Active Heat Pump</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+
+</head>
+<style>
+    /* Calculator Hero Section */
+/* .calculator-hero {
+  background: #f9fafb;
+  padding: 3rem 0;
+} */
+
+/* .calculator-hero .container { */
+  /* display: grid; */
+  /* grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); */
+  /* gap: 1.8rem; */
+/* } */
+
+.calculator-hero h1 {
+  font-size: 2.2rem;
+}
+
+/* .calculator-hero .illustration-box {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+} */
+
+.calculator-hero .illustration-box ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+/* Calculator Form */
+/* .calculator-form {
+  background: #ffffff;
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+} */
+
+.estimator-form label {
+  font-size: 0.95rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.estimator-form input,
+.estimator-form select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #ffffff;
+}
+
+.estimator-form button {
+  margin-top: 1.2rem;
+  padding: 1rem;
+  background: var(--brand);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+.estimator-form button:hover {
+  background: #0854c3;
+}
+
+/* Result Section */
+.calculator-result {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  margin-top: 1.5rem;
+}
+
+.calculator-result h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.calculator-result p {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.calculator-result a {
+  font-size: 1rem;
+  background: var(--brand);
+  padding: 1rem 2rem;
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.calculator-result a:hover {
+  background: #0854c3;
+}
+
+/* Process Steps */
+.process-steps {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* .step {
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+} */
+
+.step-number {
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 1.2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* .step h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+} */
+
+/* Final CTA */
+/* .final-cta {
+  background: var(--brand-soft);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.final-cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta a {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  background: var(--brand);
+  color: white;
+  border-radius: var(--radius-pill);
+}
+
+.final-cta a:hover {
+  background: #0854c3;
+} */
+.faq-items {
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-size: 16px;
+  background: var(--brand-soft);
+  color: var(--text);
+  font-weight: bold;
+  border: none;
+  width: 100%;
+  text-align: left;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #eaf5ff;
+}
+
+.faq-answer {
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: var(--radius-lg);
+  display: none;
+  margin-top: 0.5rem;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+.faq-item .faq-answer p {
+  color: var(--muted);
+}
+
+.faq-item .faq-question:after {
+  content: "+";
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.faq-item.active .faq-question:after {
+  content: "-";
+}
+
+</style>
+
+<body>
+  <!-- Header (same as homepage) -->
+    <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Replace with your logo image if you have one -->
+        <!-- <a href="index.html">Active<span>HeatPump</span></a> -->
+         <a href="index.html"><img src="./Images/logo.png" width="120" alt="" srcset=""></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/gov-grants.html">Grants</a></li>
+          <li><a href="#">Cost Calculator</a></li>
+         <li><a href="/Blogs.html">Blogs</a></li>
+          <li><a href="/case-studies.html">Case Studies</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="./index.html#contact" class="btn btn-primary btn-header">Free Home Survey</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Cost Calculator Hero Section -->
+    <section class="section calculator-hero">
+      <div class="container two-column">
+        <div class="col">
+          <p class="eyebrow">Calculate Your Heat Pump Savings</p>
+          <h1>Estimate the Cost of Installing a Heat Pump</h1>
+          <p>
+            Our interactive calculator helps you understand the potential costs and savings of installing a heat pump in your home. Get an instant estimate of your heating savings, installation costs, and any government grant eligibility.
+          </p>
+          <p>
+            Answer a few simple questions to get started. You’ll receive a detailed estimate, and if eligible, we will help you apply for the Boiler Upgrade Scheme grant.
+          </p>
+        </div>
+        <div class="col">
+          <div class="illustration-box">
+            <p class="small-label">How It Works</p>
+            <ul>
+              <li>Quickly estimate installation costs</li>
+              <li>See potential savings based on your current heating system</li>
+              <li>Get government grant eligibility details</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost Calculator Form -->
+    <section id="calculator" class="section calculator-form">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Estimate Your Cost and Savings</h2>
+          <p>
+            Use our easy-to-follow calculator to estimate how much installing a heat pump could cost and how much you could save on your energy bills. You’ll also get an idea of the available government grants to help with installation costs.
+          </p>
+        </div>
+        <div class="calculator-container">
+          <form id="cost-calculator-form" class="estimator-form">
+            <label>
+              Property Type
+              <select id="property-type">
+                <option value="small">Small (up to 80 m²)</option>
+                <option value="medium">Medium (80 to 140 m²)</option>
+                <option value="large">Large (140 m²+)</option>
+              </select>
+            </label>
+
+            <label>
+              Current Heating System
+              <select id="heating-system">
+                <option value="gas">Gas Boiler</option>
+                <option value="oil">Oil Boiler</option>
+                <option value="lpg">LPG Boiler</option>
+                <option value="electric">Electric Heating</option>
+              </select>
+            </label>
+
+            <label>
+              Annual Heating Spend (£)
+              <input type="number" id="annual-spend" placeholder="e.g. 1200" required />
+            </label>
+
+            <label>
+              Insulation Level
+              <select id="insulation">
+                <option value="high">Modern and Well Insulated</option>
+                <option value="medium">Average Insulation</option>
+                <option value="low">Older and Poorly Insulated</option>
+              </select>
+            </label>
+
+            <label>
+              Postcode
+              <input type="text" id="postcode" placeholder="SW1A 1AA" required />
+            </label>
+
+            <button type="submit" class="btn btn-primary btn-block">Get Estimate</button>
+          </form>
+
+          <div id="calculator-result" class="calculator-result">
+            <h3>Your Estimated Cost</h3>
+            <p><strong>Estimated Installation Cost:</strong> £<span id="install-cost">0</span></p>
+            <p><strong>Estimated Annual Savings:</strong> £<span id="annual-savings">0</span></p>
+            <p><strong>Available Grant:</strong> £<span id="grant-amount">0</span></p>
+            <p><strong>Total After Grant:</strong> £<span id="total-after-grant">0</span></p>
+            <a href="index.html#contact" class="btn btn-primary">Book a Free Home Survey</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How the Calculator Works -->
+    <section class="section how-it-works">
+      <div class="container">
+        <div class="section-heading">
+          <h2>How the Cost Calculator Works</h2>
+          <p>
+            Our calculator uses your property details and heating habits to generate a tailored estimate for your heat pump installation. Here’s how it works:
+          </p>
+        </div>
+        <div class="process-steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Property Information</h3>
+            <p>
+              Select your property type and provide details about your current heating system to get started.
+            </p>
+          </div>
+
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Calculate Savings and Costs</h3>
+            <p>
+              The calculator will estimate your heating cost savings, installation costs, and grant eligibility based on your inputs.
+            </p>
+          </div>
+
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Get Your Estimate</h3>
+            <p>
+              Receive your detailed cost estimate, including any available grants to help reduce your upfront investment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs about the Calculator -->
+   <section class="section faq">
+  <div class="container">
+    <div class="section-heading">
+      <h2>FAQs about the Heat Pump Cost Calculator</h2>
+      <p>Here are some common questions about how our cost calculator works.</p>
+    </div>
+    <div class="faq-items">
+      <div class="faq-item">
+        <button class="faq-question">What is the Boiler Upgrade Scheme Grant?</button>
+        <div class="faq-answer">
+          <p>The Boiler Upgrade Scheme provides a grant of up to £7,500 for homeowners who install a heat pump. This grant helps offset the installation cost, making it more affordable to upgrade to a heat pump.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How accurate are the results?</button>
+        <div class="faq-answer">
+          <p>The calculator provides an estimate based on your inputs. A full home survey will provide a more accurate cost and savings estimate tailored to your property.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Can I apply for the grant myself?</button>
+        <div class="faq-answer">
+          <p>We will handle the application for the Boiler Upgrade Scheme on your behalf to ensure everything is done correctly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Call to Action -->
+    <section class="section final-cta">
+      <div class="container final-cta-inner">
+        <h2>Ready to Start Saving?</h2>
+        <p>
+          Get an accurate estimate of your heat pump installation costs and potential savings by using our cost calculator. If you're ready to get started, book a free home survey today!
+        </p>
+        <a href="index.html#contact" class="btn btn-primary">Book Your Free Survey</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as homepage) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+     <div class="footer-col">
+        <div class="logo">
+          <a href="/index.html"><img src="./Images/logo.png" width="200" alt="" srcset=""></a>
+        </div>
+        <br>
+        <p>Helping UK households move to cleaner. more efficient home heating with professionally installed heat pumps.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+         <ul>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/gov-grants.html">Grants</a></li>
+          <li><a href="/case-studies.html">Case studies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms of use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          Phone. <a href="tel:+441234567890">+44 (0)1234 567 890</a><br />
+          Email. <a href="mailto:info@activeheatpump.co.uk">info@activeheatpump.co.uk</a><br />
+          Registered in the UK
+        </p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Active Heat Pump. All rights reserved</p>
+    </div>
+
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('.main-nav');
+      navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+        navToggle.classList.toggle('open');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(item => {
+  item.addEventListener('click', () => {
+    const parent = item.parentElement;
+    parent.classList.toggle('active');
+  });
+});
+
+  </script>
+   <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to top">
+  ↑
+</button>
+<script>
+  // Get the button
+const backToTopButton = document.getElementById('backToTop');
+
+// Show the button when scrolling down
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // Button will appear after scrolling 300px
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+});
+
+// Scroll to the top when the button is clicked
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scroll
+  });
+});
+
+</script>
+</body>
+</html>

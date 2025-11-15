@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Active Heat Pump</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+</head>
+<style>
+    /* Product Hero Section */
+.product-hero {
+  background: #f9fafb;
+  padding: 3rem 0;
+}
+
+.product-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-hero p {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Product Cards */
+.product-listing .product-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+.product-card h3 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-top: 0.8rem;
+}
+
+.product-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+.product-card a:hover {
+  text-decoration: underline;
+}
+
+/* Product Details Section */
+.product-details {
+  background: #ffffff;
+  padding: 3rem 1.5rem;
+  box-shadow: var(--shadow-soft);
+  margin-top: 2rem;
+}
+
+.product-details img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  margin-top: 1rem;
+}
+
+.product-detail h3 {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.product-detail ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.product-detail ul li {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.product-detail button {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  background: var(--brand);
+  color: white;
+  border-radius: var(--radius-pill);
+  font-size: 1.1rem;
+}
+
+.product-detail button:hover {
+  background: #0854c3;
+}
+
+/* Final CTA */
+/* .final-cta {
+  background: var(--brand-soft);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.final-cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta a {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  background: var(--brand);
+  color: white;
+  border-radius: var(--radius-pill);
+}
+
+.final-cta a:hover {
+  background: #0854c3;
+} */
+
+</style>
+
+<body>
+  <!-- Header (same as homepage) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Replace with your logo image if you have one -->
+        <!-- <a href="index.html">Active<span>HeatPump</span></a> -->
+         <a href="index.html"><img src="./Images/logo.png" width="120" alt="" srcset=""></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="/gov-grants.html">Grants</a></li>
+          <li><a href="/cost-cal.html">Cost Calculator</a></li>
+           <li><a href="/Blogs.html">Blogs</a></li>
+          <li><a href="/case-studies.html">Case Studies</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="./index.html#contact" class="btn btn-primary btn-header">Free Home Survey</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Product Hero Section -->
+    <section class="section product-hero">
+      <div class="container">
+        <div class="section-heading">
+          <h1>Our Heat Pump Products</h1>
+          <p>
+            Browse our range of energy-efficient heat pumps designed to provide the best heating and cooling solutions for your
+            home. We offer both **air-source** and **ground-source** heat pumps to suit every need.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Listings -->
+    <section id="products" class="section product-listing">
+      <div class="container">
+        <div class="product-grid">
+          <!-- Product 1 -->
+            <article class="product-card">
+            <img src="./Images/Air2.jpg" alt="Ground Source Heat Pump" />
+            <div class="product-card-content">
+              <h3>Ground Source Heat Pump</h3>
+              <p>
+                The Ground Source Heat Pump extracts heat from the ground, making it more efficient than air-source models,
+                especially for larger properties with a garden.
+              </p>
+              <ul>
+                <li>Highly efficient</li>
+                <li>Works year-round</li>
+                <li>Ideal for large homes with gardens</li>
+              </ul>
+              <a href="/product-detail.html" class="btn btn-outline">Learn More</a>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+           <article class="product-card">
+            <img src="./Images/Air4.gif" alt="Water Source Heat Pump" />
+            <div class="product-card-content">
+              <h3>Water Source Heat Pump</h3>
+              <p>
+                A Water Source Heat Pump is designed for homes near water sources, extracting heat from rivers or lakes for a
+                sustainable and efficient heating solution.
+              </p>
+              <ul>
+                <li>Uses water as the energy source</li>
+                <li>Best for homes near lakes, rivers, or ponds</li>
+                <li>Highly efficient and sustainable</li>
+              </ul>
+              <a href="/product-detail.html" class="btn btn-outline">Learn More</a>
+            </div>
+          </article>
+         
+
+          <!-- Product 3 -->
+           <article class="product-card">
+            <img src="./Images/Air1.webp" alt="Air Source Heat Pump" />
+            <div class="product-card-content">
+              <h3>Air Source Heat Pump</h3>
+              <p>
+                The Air Source Heat Pump extracts heat from the air to provide efficient heating and cooling for your home. It is
+                perfect for properties with limited space.
+              </p>
+              <ul>
+                <li>Energy-efficient</li>
+                <li>Quiet operation</li>
+                <li>Perfect for smaller homes</li>
+              </ul>
+              <a href="/product-detail.html" class="btn btn-outline">Learn More</a>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+         <article class="product-card">
+            <img src="./Images/Air3.jpeg" alt="Hybrid Heat Pump" />
+            <div class="product-card-content">
+              <h3>Hybrid Heat Pump</h3>
+              <p>
+                A Hybrid Heat Pump combines the benefits of air-source and ground-source heat pumps, providing flexibility and
+                energy savings in any climate.
+              </p>
+              <ul>
+                <li>Flexible and cost-effective</li>
+                <li>Combines air-source and ground-source</li>
+                <li>Ideal for varying heating demands</li>
+              </ul>
+              <a href="/product-detail.html" class="btn btn-outline">Learn More</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Details Section (for individual product pages) -->
+    <section class="section product-details">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Product Details</h2>
+          <p>
+            Learn more about the specifications, installation process, and benefits of each heat pump system. You can also
+            find out how our products are designed to fit your home’s needs.
+          </p>
+        </div>
+        <div class="product-detail-grid">
+          <div class="product-detail">
+            <img src="./Images/Air1.webp" width="150px" height="500px" alt="Product Detail 1" />
+            <div class="detail-content">
+              <h3>Air Source Heat Pump</h3>
+              <p><strong>Description:</strong> The Air Source Heat Pump extracts heat from the air to provide efficient heating and cooling for your home. It is perfect for properties with limited space.</p>
+              <p><strong>Price:</strong> £2,000</p>
+              <p><strong>Warranty:</strong> 5 years</p>
+              <button class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="section final-cta">
+      <div class="container final-cta-inner">
+        <h2>Want to Know Which Heat Pump is Right for You?</h2>
+        <p>
+          Contact us today for a free consultation and our team will help you choose the perfect heat pump solution for your
+          home. We can guide you through the available grants and financing options too!
+        </p>
+        <a href="index.html#contact" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as homepage) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <div class="logo">
+          <a href="/index.html"><img src="./Images/logo.png" width="200" alt="" srcset=""></a>
+        </div>
+        <br>
+        <p>Helping UK households move to cleaner. more efficient home heating with professionally installed heat pumps.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+       <ul>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/gov-grants.html">Grants</a></li>
+          <li><a href="/case-studies.html">Case studies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms of use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          Phone. <a href="tel:+441234567890">+44 (0)1234 567 890</a><br />
+          Email. <a href="mailto:info@activeheatpump.co.uk">info@activeheatpump.co.uk</a><br />
+          Registered in the UK
+        </p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Active Heat Pump. All rights reserved</p>
+    </div>
+
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('.main-nav');
+      navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+        navToggle.classList.toggle('open');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+   <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to top">
+  ↑
+</button>
+<script>
+  // Get the button
+const backToTopButton = document.getElementById('backToTop');
+
+// Show the button when scrolling down
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // Button will appear after scrolling 300px
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+});
+
+// Scroll to the top when the button is clicked
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scroll
+  });
+});
+
+</script>
+</body>
+</html>

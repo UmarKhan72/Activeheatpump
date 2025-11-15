@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Government Grants | Active Heat Pump</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon/site.webmanifest" />
+
+</head>
+<style>
+    /* Grant Hero Section */
+.grants-hero {
+  background: #ffffff;
+}
+
+.grants-hero .container {
+  display: grid;
+  /* grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); */
+  gap: 2rem;
+}
+
+.grants-hero h1 {
+  font-size: 2.3rem;
+}
+
+.grants-hero .illustration-box {
+  background: #0b1220;
+  color: #e5e7eb;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.grants-hero .illustration-box ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+/* FAQ Section */
+.faq-items .faq-item {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.04);
+}
+
+.faq-items .faq-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.faq-items .faq-item p {
+  color: var(--muted);
+}
+
+/* Estimator Form */
+.savings-estimator .estimator-form {
+  display: grid;
+  gap: 1rem;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.savings-estimator label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.savings-estimator input,
+.savings-estimator select {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.savings-estimator button {
+  padding: 1rem;
+  background: var(--brand);
+  color: #ffffff;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+.savings-estimator button:hover {
+  background: #0854c3;
+}
+
+/* CTA & Buttons */
+/* .final-cta {
+  background: var(--brand-soft);
+  color: var(--text);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.final-cta-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.final-cta a {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  background: var(--brand);
+  color: white;
+  border-radius: var(--radius-pill);
+}
+
+.final-cta a:hover {
+  background: #0854c3;
+} */
+
+</style>
+<body>
+  <!-- Header (same as homepage) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <!-- Replace with your logo image if you have one -->
+        <!-- <a href="index.html">Active<span>HeatPump</span></a> -->
+         <a href="index.html"><img src="./Images/logo.png" width="120" alt="" srcset=""></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="#">Grants</a></li>
+          <li><a href="/cost-cal.html">Cost Calculator</a></li>
+           <li><a href="/Blogs.html">Blogs</a></li>
+          <li><a href="/case-studies.html">Case Studies</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="./index.html#contact" class="btn btn-primary btn-header">Free Home Survey</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section for Grants -->
+    <section class="section grants-hero">
+      <div class="container two-column">
+        <div class="col">
+          <p class="eyebrow">Government Grants</p>
+          <h1>Save up to £7,500 with Government Heat Pump Grants</h1>
+          <p>
+            With the UK Government's Boiler Upgrade Scheme, you can receive up to £7,500 towards the installation of a heat pump.
+            At Active Heat Pump, we make sure that you access this support effortlessly.
+          </p>
+          <p>
+            Our expert team guides you through the application process and ensures you get the maximum grant available for your
+            property and heating needs.
+          </p>
+        </div>
+        <div class="col">
+          <div class="illustration-box">
+            <p class="small-label">What is the Boiler Upgrade Scheme?</p>
+            <ul>
+              <li>Up to £7,500 off the installation of a heat pump system</li>
+              <li>Available for air-source and ground-source heat pumps</li>
+              <li>Government funding for qualifying properties in England and Wales</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How the Grant Works -->
+    <section class="section grant-works">
+      <div class="container">
+        <div class="section-heading">
+          <h2>How Does the Grant Work?</h2>
+          <p>
+            The Boiler Upgrade Scheme provides financial assistance to homeowners who wish to upgrade their old heating systems
+            to energy-efficient heat pumps.
+          </p>
+        </div>
+        <div class="two-column">
+          <div class="col">
+            <h3>Eligibility Criteria</h3>
+            <ul>
+              <li>Your home must be in England or Wales</li>
+              <li>Current heating system: an old gas, oil, or LPG boiler</li>
+              <li>Your property must be suitable for a heat pump installation (assessed by a professional)</li>
+              <li>You must not have already received a grant for heat pump installation in the last 12 months</li>
+            </ul>
+            <p>
+              Don’t worry if you’re unsure about eligibility. We will conduct a free survey to confirm your property’s suitability
+              for the grant and the heat pump system.
+            </p>
+          </div>
+          <div class="col">
+            <h3>How to Apply</h3>
+            <ol>
+              <li><strong>Book a free home survey:</strong> We assess your home and heating needs.</li>
+              <li><strong>Grant Application:</strong> Our team will handle the application and paperwork for you.</li>
+              <li><strong>Get the grant:</strong> The grant will be applied to your final bill.</li>
+              <li><strong>Installation:</strong> Our MCS-certified engineers install your heat pump system.</li>
+            </ol>
+            <p>We manage everything, so you can enjoy the benefits of your new heat pump with no hassle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Estimate Your Savings -->
+    <section class="section estimate-savings">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Estimate Your Savings</h2>
+          <p>
+            See how much you could save by switching to a heat pump. With the grant, your heating costs could drop significantly,
+            and your home’s efficiency will improve.
+          </p>
+        </div>
+        <div class="savings-estimator">
+          <form class="estimator-form">
+            <label>
+              Property Type
+              <select>
+                <option>Detached</option>
+                <option>Semi-detached</option>
+                <option>Terraced</option>
+                <option>Flat</option>
+              </select>
+            </label>
+            <label>
+              Current Heating System
+              <select>
+                <option>Gas Boiler</option>
+                <option>Oil Boiler</option>
+                <option>LPG Boiler</option>
+                <option>Electric Heating</option>
+              </select>
+            </label>
+            <label>
+              Annual Heating Spend (£)
+              <input type="number" placeholder="e.g. 1200" />
+            </label>
+            <button type="submit" class="btn btn-primary btn-block">Estimate My Savings</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs about Grants -->
+    <section id="grants-faq" class="section faq">
+      <div class="container">
+        <div class="section-heading">
+          <h2>FAQs About Government Grants</h2>
+          <p>We’ve answered some of the most common questions about the Boiler Upgrade Scheme and how you can benefit.</p>
+        </div>
+        <div class="faq-items">
+          <div class="faq-item">
+            <h3>What is the Boiler Upgrade Scheme?</h3>
+            <p>
+              The Boiler Upgrade Scheme provides financial support to help homeowners install heat pumps instead of their old
+              fossil-fuel boilers.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How much funding can I get?</h3>
+            <p>
+              You can receive up to £7,500 for the installation of an air-source or ground-source heat pump.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Am I eligible for the Boiler Upgrade Scheme?</h3>
+            <p>
+              Eligibility depends on your property type and current heating system. Book a free survey with us to confirm your
+              eligibility.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I apply for the grant?</h3>
+            <p>
+              Once you book a survey, we will guide you through the application process and apply for the grant on your behalf.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust and Certifications -->
+    <section class="section trust-certifications">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Trust and Certifications</h2>
+          <p>
+            We are proud to be an MCS certified installer, providing the highest level of professionalism and compliance with UK
+            renewable heating standards.
+          </p>
+        </div>
+        <div class="certifications" style="display: flex;align-items: center;gap: 20px;">
+          <div class="cert-logo">
+            <img src="./Images/mcs.webp" width="120" alt="MCS Certified" />
+          </div>
+          <div class="cert-logo">
+            <img src="./Images/trust.png" width="250" alt="TrustMark" />
+          </div>
+          <div class="cert-logo">
+            <img src="./Images/recc.png" width="150" alt="RECC" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="section final-cta">
+      <div class="container final-cta-inner">
+        <h2>Ready to Apply for Your Heat Pump Grant?</h2>
+        <p>
+          Take the first step today and book a free home survey. Our team will help you understand the grant options and
+          provide you with a clear, no-obligation quote.
+        </p>
+        <a href="index.html#contact" class="btn btn-primary">Book My Survey Now</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (same as homepage) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <div class="logo">
+          <a href="/index.html"><img src="./Images/logo.png" width="200" alt="" srcset=""></a>
+        </div>
+        <br>
+        <p>Helping UK households move to cleaner. more efficient home heating with professionally installed heat pumps.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+         <ul>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/product.html">Products</a></li>
+          <li><a href="/gov-grants.html">Grants</a></li>
+          <li><a href="/case-studies.html">Case studies</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Terms of use</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>
+          Phone. <a href="tel:+441234567890">+44 (0)1234 567 890</a><br />
+          Email. <a href="mailto:info@activeheatpump.co.uk">info@activeheatpump.co.uk</a><br />
+          Registered in the UK
+        </p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Active Heat Pump. All rights reserved</p>
+    </div>
+
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('.main-nav');
+      navToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+        navToggle.classList.toggle('open');
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+   <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top" title="Back to top">
+  ↑
+</button>
+<script>
+  // Get the button
+const backToTopButton = document.getElementById('backToTop');
+
+// Show the button when scrolling down
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) { // Button will appear after scrolling 300px
+    backToTopButton.classList.add('show');
+  } else {
+    backToTopButton.classList.remove('show');
+  }
+});
+
+// Scroll to the top when the button is clicked
+backToTopButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scroll
+  });
+});
+
+</script>
+
+</body>
+</html>
